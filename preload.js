@@ -28,7 +28,6 @@ window.addEventListener('DOMContentLoaded', () => {
    }
 
     fetch(url).then(res => res.json()).then((out) => {
-      console.log(out);
       var question = unescape(unescapeHtml(out.results[0].question));
       var cat = unescape(unescapeHtml(out.results[0].category));
       var diff = unescape(unescapeHtml(out.results[0].difficulty[0].toUpperCase())) + unescape(unescapeHtml(out.results[0].difficulty.slice(1)));
@@ -40,8 +39,6 @@ window.addEventListener('DOMContentLoaded', () => {
       for(let i = 0; i < incorrect.length; i++) {
         incorrect[i] = unescape(unescapeHtml(incorrect[i]));
       }
-
-      console.log(incorrect)
 
       if(type == "boolean") {
         let x = incorrect[0];
@@ -67,12 +64,13 @@ window.addEventListener('DOMContentLoaded', () => {
       document.getElementById('answer-1').innerHTML = incorrect[0];
       document.getElementById('answer-2').innerHTML = incorrect[1];
 
+      
+
       for(answer in answers) {
         document.getElementById('answer-' + answers[answer]).onclick = (e) => {
           for(a in answers) {
             let x = document.getElementById('answer-' + answers[a]);
             document.getElementById('results-container').style.visibility = 'visible';
-            console.log(x.innerHTML)
             if(x.innerHTML == correct) {
               x.classList.remove('btn-hover')
               x.style.backgroundColor = 'green';
@@ -85,7 +83,6 @@ window.addEventListener('DOMContentLoaded', () => {
             }
           }
           var chosen = e.srcElement.innerHTML;
-          console.log(correct);
           if(chosen == correct) {
             document.getElementById('results').innerHTML = 'Good job! You got the correct answer!';
           }
@@ -96,5 +93,8 @@ window.addEventListener('DOMContentLoaded', () => {
         }
       }
 
+      //start_time = new Date().getTime() / 1000;
+
     }).catch(err => {throw err});
   })
+  

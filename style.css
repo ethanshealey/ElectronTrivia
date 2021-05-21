@@ -3,6 +3,7 @@ body {
     background: linear-gradient(-25deg, #3086ff, #b730ff);
     background-attachment: fixed;
 }
+
 .main-container {
     border-radius: 10px;
     height: 80%;
