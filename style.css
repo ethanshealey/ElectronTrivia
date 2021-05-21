@@ -1,0 +1,44 @@
+body {
+    color: white !important;
+    background: linear-gradient(-25deg, #3086ff, #b730ff);
+    background-attachment: fixed;
+}
+.main-container {
+    border-radius: 10px;
+    height: 80%;
+    border: 1.5px solid rgba(255,255,255,.2);
+    background: rgba(255,255,255,.125);
+    padding: 25px;
+}
+.btn-clear {
+    color: white !important;
+    border-radius: 10px !important;
+    border: 1.5px solid rgba(255,255,255,.2) !important;
+}
+.btn-hover:hover {
+    background: rgba(255,255,255,.2) !important;
+}
+.btn-green {
+    color: white !important;
+    border-radius: 10px !important;
+    border: 1.5px solid rgba(72, 255, 0, 0.2) !important;
+    background: rgba(72, 255, 0, 0.2) !important;
+}
+.btn-red {
+    color: white !important;
+    border-radius: 10px !important;
+    background: rgba(255, 21, 21, 0.2) !important;
+    border: 1.5px solid rgba(255, 21, 21, 0.2) !important;
+}
+.Easy {
+    color: rgb(75, 190, 75) !important;
+}
+.Medium {
+    color: orange !important;
+}
+.Hard {
+    color: red !important;
+}
+#results-container {
+    visibility: hidden;
+}
